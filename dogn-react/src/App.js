@@ -10,6 +10,7 @@ import './css/index.css';
 import { useState } from 'react';
 import ClassComp2 from './ClassComp2';
 import ForComp from './ForComp';
+import MeatLove from './MeatLove';
 
 
 function App() {
@@ -18,9 +19,22 @@ function App() {
 
     const 반복컴포넌트 =[];
 
+    const 고기목록 = ['닭','소','돼지','양','오리','불'];
+
     for(let i = 0; i <10 ; i++){
         반복컴포넌트.push(<ForComp index={i+1}></ForComp>);
     }
+
+    let test = '';
+
+    고기목록.map((고기)=>{
+        test += 고기;
+    });
+
+    console.log(test);
+    // for(let i = 0; i <10 ; i++){
+    //     고기조아.push(<MeatLove 고기종류={고기목록[i]}></MeatLove>);
+    // }
     
   return (
     <div className='apps'>
@@ -93,6 +107,22 @@ function App() {
     <ClassComp2></ClassComp2>
     {/* <ForComp></ForComp> */}
     {반복컴포넌트}
+    {/* {고기조아} */}
+
+    {
+        고기목록.map((고기.index)=>
+        <MeatLove 고기종류={고기} 순서={index}></MeatLove>)
+    }
+    {/* 배열.map(처리방법) */}
+
+    {/* <MeatLove 고기종류={고기목록[0]}></MeatLove>
+    <MeatLove 고기종류={고기목록[1]}></MeatLove>
+    <MeatLove 고기종류={고기목록[2]}></MeatLove>
+    <MeatLove 고기종류={고기목록[3]}></MeatLove>
+    <MeatLove 고기종류={고기목록[4]}></MeatLove>
+    <MeatLove 고기종류={고기목록[5]}></MeatLove> */}
+
+    
     <main>
         <section id="advantages-container">
             <div className="advantage">
