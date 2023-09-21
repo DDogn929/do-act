@@ -11,6 +11,8 @@ import { useState } from 'react';
 import ClassComp2 from './ClassComp2';
 import ForComp from './ForComp';
 import MeatLove from './MeatLove';
+import LoginCheck from './LoginCheck';
+import Lodding from './Lodding';
 
 
 function App() {
@@ -30,6 +32,18 @@ function App() {
     고기목록.map((고기)=>{
         test += 고기;
     });
+
+    const [isLoggedin,setLoggedin]= useState(false);
+
+
+    const [lodding,setLodding]=useState();
+    const []=useState();
+
+    const 로딩목록 =[];
+    const 로딩컨텐츠 = <p>로딩중...</p>;
+
+
+
 
     console.log(test);
     // for(let i = 0; i <10 ; i++){
@@ -110,7 +124,7 @@ function App() {
     {/* {고기조아} */}
 
     {
-        고기목록.map((고기.index)=>
+        고기목록.map((고기,index)=>
         <MeatLove 고기종류={고기} 순서={index}></MeatLove>)
     }
     {/* 배열.map(처리방법) */}
@@ -121,6 +135,21 @@ function App() {
     <MeatLove 고기종류={고기목록[3]}></MeatLove>
     <MeatLove 고기종류={고기목록[4]}></MeatLove>
     <MeatLove 고기종류={고기목록[5]}></MeatLove> */}
+
+    <LoginCheck 로그인확인 = {isLoggedin}></LoginCheck>
+
+    <button onClick={()=>{
+        setLoggedin(!isLoggedin)
+    }}>{isLoggedin ? '로그아웃' : '로그인'}</button>
+
+
+    {/* <Lodding 로딩확인={lodding}></Lodding> */}
+    
+    <button>불러오기</button>
+
+
+    
+    
 
     
     <main>
