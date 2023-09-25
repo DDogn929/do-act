@@ -39,16 +39,15 @@ function App() {
     const [lodding,setLodding]=useState();
     const []=useState();
 
-    const 로딩목록 =[];
-    const 로딩컨텐츠 = <p>로딩중...</p>;
-
-
-
-
     console.log(test);
-    // for(let i = 0; i <10 ; i++){
-    //     고기조아.push(<MeatLove 고기종류={고기목록[i]}></MeatLove>);
-    // }
+    
+
+    const [isChecked,setIsChecked] = useState(true);
+    const [isLoggedIn , setIsLoggedIn] = useState(false)
+
+    const [로딩목록,set로딩목록] = useState([]);
+    const 로딩컨텐츠 = <p>로딩중..
+    </p>;
     
   return (
     <div className='apps'>
