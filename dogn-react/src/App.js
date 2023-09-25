@@ -33,13 +33,13 @@ function App() {
         test += 고기;
     });
 
-    const [isLoggedin,setLoggedin]= useState(false);
+    // const [isLoggedin,setLoggedin]= useState(false);
 
 
-    const [lodding,setLodding]=useState();
-    const []=useState();
+    // const [lodding,setLodding]=useState();
+    // const []=useState();
 
-    console.log(test);
+    // console.log(test);
     
 
     const [isChecked,setIsChecked] = useState(true);
