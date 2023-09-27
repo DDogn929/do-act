@@ -12,8 +12,12 @@ export default function LineContainner(props) {
             for(let j = 0 ; j < size ; j++){
                 tableRow.push(<td></td>);
             }
-            tableRow.push(<td>{tableInner}</td>)
+            
+            tableInner.push(<tr>{tableRow}</tr>)
         }
+
+        console.log(tableInner)
+        return tableInner;
     }
 
   return (

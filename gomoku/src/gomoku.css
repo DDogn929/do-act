@@ -24,6 +24,10 @@
     height:var(--cell-size);
     box-sizing: border-box;
     flex-shrink: 0;
+
+    /* border: 1px;
+    border-style: solid;
+    border-color: black; */
 }
 
 table {
